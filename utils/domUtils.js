@@ -23,7 +23,7 @@ export function handleImageClick(event) {
     const backgroundImage = computedStyle.getPropertyValue('background-image');
     
     if (backgroundImage !== 'none') {
-      const urlMatch = backgroundImage.match(/url$$["']?(.*?)["']?$$/);
+      const urlMatch = backgroundImage.match(/url\(["']?(.*?)["']?\)/);
       if (urlMatch && urlMatch[1]) {
         return urlMatch[1];
       }

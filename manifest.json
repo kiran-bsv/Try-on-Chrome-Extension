@@ -6,16 +6,15 @@
     "permissions": ["tabs", "activeTab", "scripting", "clipboardWrite"],
     "host_permissions": ["<all_urls>"],
     "background": {
-        "service_worker": "background/background.js"
+        "service_worker": "dist/background.bundle.js"
     },
     "action": {
-        "default_popup": "popup/popup.html"
+        "default_popup": "dist/popup.html"
     },
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["content/content.js"],
-            "css": ["content/content.css"]
+            "js": ["dist/content.bundle.js"]
         }
     ]
 }
